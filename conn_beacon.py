@@ -42,7 +42,7 @@ while not Connected:
   adapter.scan_for(50)
   peripherals = adapter.scan_get_results()
   for peripheral in peripherals:
-    if peripheral.address() == args['macid'].upper():
+    if peripheral.address().upper() == args['macid'].upper():
       print(f"Found, trying to connect to {peripheral.address()}")
       try:
         peripheral.connect()
