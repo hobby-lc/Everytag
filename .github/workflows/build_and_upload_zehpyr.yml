@@ -154,6 +154,7 @@ jobs:
           echo "No patches directory found, skipping patch application."
         fi
         cd ..
+      continue-on-error: true # If this step fails, the workflow proceeds
 
     - name: build firmware
       id: build_firmware
