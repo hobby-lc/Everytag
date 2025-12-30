@@ -141,10 +141,11 @@ jobs:
       shell: bash
       run: |
         cd app
+        echo $(pwd)
         if [ -d ./patches ]; then
           for patch in patches/*.patch; do
             echo "Applying GIT patch $patch"
-            git apply "$patch"
+            git apply --allow-empty "$patch"
           done
           for patch in patches/*.sh; do
             echo "Executing patch script $patch"
