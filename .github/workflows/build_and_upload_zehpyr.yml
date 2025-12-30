@@ -142,11 +142,11 @@ jobs:
       run: |
         cd app
         if [ -d ./patches ]; then
-          for patch in ./patches/*.patch; do
+          for patch in patches/*.patch; do
             echo "Applying GIT patch $patch"
             git apply "$patch"
           done
-          for patch in ./patches/*.sh; do
+          for patch in patches/*.sh; do
             echo "Executing patch script $patch"
             source $patch $conf_file
           done
