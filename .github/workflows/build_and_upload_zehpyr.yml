@@ -144,12 +144,16 @@ jobs:
         echo $(pwd)
         if [ -d ./patches ]; then
           for patch in patches/*.patch; do
-            echo "Applying GIT patch $patch"
-            git apply --allow-empty "$patch"
+            if [ -f "$patch" ]; then
+              echo "Applying GIT patch $patch"
+              git apply --allow-empty "$patch"
+            fi
           done
           for patch in patches/*.sh; do
-            echo "Executing patch script $patch"
-            source $patch $conf_file
+            if [ -f "$patch" ]; then
+              echo "Executing patch script $patch"
+              source $patch $conf_file
+            fi
           done
         else
           echo "No patches directory found, skipping patch application."
