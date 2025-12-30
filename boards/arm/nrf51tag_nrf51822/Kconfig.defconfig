@@ -1,0 +1,8 @@
+# nRF51tag NRF51822 board configuration
+
+# Copyright (c) 2016 Linaro Limited.
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_NRF51TAG_NRF51822
+
+endif # BOARD_NRF51TAG_NRF51822

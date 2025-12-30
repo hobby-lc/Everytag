@@ -1,0 +1,23 @@
+identifier: nrf51tag/nrf51822
+name: nRF51-TAG-NRF51822
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 16
+flash: 256
+supported:
+  - adc
+  - ble
+  - counter
+  - gpio
+  - i2c
+  - nvs
+  - pwm
+  - spi
+  - watchdog
+testing:
+  ignore_tags:
+    - net
+vendor: nordic
