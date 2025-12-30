@@ -1,0 +1,3 @@
+sed -i 's/INTERVAL_SETTINGS 60/INTERVAL_SETTINGS 10/g' src/myboards.h
+sed -i 's/SETTINGS_WAIT 2/SETTINGS_WAIT 30/g' src/myboards.h
+sed -i 's/SETTINGS_ADV_INTERVAL 400/SETTINGS_ADV_INTERVAL 1000/g' src/myboards.h

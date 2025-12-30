@@ -1,0 +1,1 @@
+sed -i 's/CONFIG_RAM_POWER/#CONFIG_RAM_POWER/g' $1
